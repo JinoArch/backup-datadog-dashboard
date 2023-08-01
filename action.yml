@@ -1,0 +1,18 @@
+name: 'Backup Datadog Dashboard to S3'
+description: 'Backup Datadog dashboards to S3 bucket.'
+inputs:
+  datadog-api-key:
+    description: 'Datadog API key for authentication.'
+    required: true
+  aws-access-key-id:
+    description: 'AWS Access Key ID for S3 bucket authentication.'
+    required: true
+  aws-secret-access-key:
+    description: 'AWS Secret Access Key for S3 bucket authentication.'
+    required: true
+  s3-bucket-name:
+    description: 'Name of the AWS S3 bucket to store backups.'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'
